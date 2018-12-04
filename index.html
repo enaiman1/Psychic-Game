@@ -1,31 +1,84 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Psychic Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- bootstrap link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
     <!-- link style and reset sheets -->
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" href="./assets/css/reset.css" />
-    
-    
-</head>
-<body>
-    <div id="game">
-   
-    <h1>The Psychic Game</h1>
-    <p> Guess what letter I'm thinking of!</p>
-    <p id="wins">Wins:</p>
-    <p id="losses">Losses:</p>
-    <p id="guessLeft">Guesses Left:</p>
-    <p id="guessSoFar">Your Guesses so far:</p>
 
+
+</head>
+
+<body>
+    <!-- create title for page using bootstrap jumbotron -->
+    <div class="jumbotron text-center mb-5 pb-3" id="game">
+        <h1>The Psychic Game</h1>
     </div>
+
+    <!-- instructions -->
+    <div class="container border border-dark text-center bg-light rounded p-3 mb-3 ">
+        <h3> Guess what letter I'm thinking of!</h3>
+        <p> Type a letter from the keyboard</p>
+    </div>
+
+    <!-- scoring table -->
+    <div class="container p-3 mb-3">
+        <div class="row justify-content-between">
+
+            <!-- wins column -->
+            <div class="col-sm-4 bg-light text-center border border-dark rounded-circle">
+                <p id="wins">Wins:</p>
+            </div>
+
+            <!-- losses column -->
+            <div class="col-sm-4 bg-light text-center border border-dark rounded-circle">
+                <p id="losses">Losses:</p>
+            </div>
+        </div>
+        <!--closing row div-->
+    </div>
+    <!--closing scoring table div-->
+
+    <!-- guess so far -->
+
+    <div class="container   p-3 mb-3">
+        <div class="row justify-content-center">
+            <div class="col-sm-4 border border-dark bg-light rounded-circle text-center">
+                <p id="guessSoFar">Your Guesses so far:</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- guess left -->
+
+    <div class="container   p-3 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-4 bg-light border border-dark  rounded-circle text-center">
+                <p id="guessLeft">Guesses Left:</p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="navbar fixed-bottom border border-dark pt-3 mt-3 justify-content-center navbar-light bg-light ">
+        <div>
+            <p>Coded by Eric</p>
+            <p>Copyright &copy; </p>
+        </div>
+
+
+    </footer>
+
 
     <!-- link script page -->
     <script src="./assets/javascript/game.js"></script>
-</body> 
+</body>
+
 </html>
