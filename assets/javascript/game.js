@@ -16,6 +16,11 @@ var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.l
 
 console.log("computer guess: " + computerGuess); // will check to make sure compouter is picking
 
+
+
+
+// ----------------------- starting code-----------
+
 document.onkeyup = function (event) { //when a user left there finger off a letter on the keyboard
     var userGuess = event.key; //creating an event for activating keyboard
     guessSoFar.push(userGuess); // storing letter that userGuess touched on the keyboard
@@ -24,28 +29,32 @@ document.onkeyup = function (event) { //when a user left there finger off a lett
     if (guessLeft != 1) { // if the guess is not equal to 1
         guessLeft--; // then 1 point is taken away from guess left
         guessLeftText.textContent = ("Guesses left: " + guessLeft); // calls on var guess left and changes content on display to new total 
-        guessSoFarText.textContent = ("Your Guess so far: " + guessSoFar); //calls on var guess so far and list letter that you have used
+        guessSoFarText.textContent = (guessSoFar); //calls on var guess so far and list letter that you have used
 
+       
+    //    if the user guess correct this is code is executed
         if (userGuess === computerGuess) { //if user guess is equal to computer guess
             wins++; // add 1 point to wins column
             winsText.textContent = ("Wins: " + wins); //calls on var wins and changes display to updated points
             guessSoFar = []; //call on which letter have already been list
             guessLeft = 9; //resets back to 9
             guessLeftText.textContent = ("Guesses left: " + guessLeft); //when game is reset, the display resets to say 9
-            guessSoFarText.textContent = ("Your Guess so far: "); //when game is reset, the display removes previous guesses 
+            guessSoFarText.textContent = (" "); //when game is reset, the display removes previous guesses 
             computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)]; //let computer pick another guess
+            alert("YOU DID IT!!");
             console.log("computer guess: " + computerGuess);
         }
 
-
+        // if the user guess wrong this code excuted
     } else {
         losses++; //if you guess wrong it, it adds a 1 to the losses colom
         lossText.textContent = ("losses: " + losses);
         guessSoFar = []; //call on which letter have already been list
         guessLeft = 9; //resets back to 9
         guessLeftText.textContent = ("Guess left: " + guessLeft);
-        guessSoFarText.textContent = ("Your Guess so far: ");
+        guessSoFarText.textContent = ("");
         computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)]; //let computer pick another guess
+        alert("Pysched out!! Please try again")
         console.log("computer guess: " + computerGuess);
     }
 

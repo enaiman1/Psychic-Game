@@ -15,32 +15,46 @@ body {
       opacity: 0.8; 
   }
 
+ 
+  #game,
+  #instructions {
+       box-shadow: 5px 10px 8px #888;
+  }
 
 
   #winColumn,
   #lossColumn,
   #guessColumn,
-  #guessLeftColumn {
+  #guessLeftColumn 
+  {
     font-weight: bold;
     background: #ccf;
-    height: 125px;
     opacity: 0.8;
+    height: 125px;
+    
   }
 
+
   #winColumn {
-      /* background: #8af; */
-      color: rgb(28, 107, 28);
-       
+      color: rgb(28, 107, 28);  
   }
 
  #lossColumn {
-     /* background: #d9f; */
      color: rgb(143, 4, 4);
          
  }
-  
+ /* #guessColumn,{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+  } */
  
-  
+ footer {
+    
+    box-shadow: 5px -10px 8px #888;
+}
 
 
 
